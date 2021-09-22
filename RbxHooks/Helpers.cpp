@@ -22,6 +22,13 @@ bool Helpers::IsTrustedSite(char* _url)
     if (url.substr(0, 7) == "http://") url.erase(0, 7);
     else if (url.substr(0, 8) == "https://") url.erase(0, 8);
 
+    // https://github.com/orcfoss/RbxHooks/issues/1
+    // If there is a "/" left in the URL, treat it as a delimiter
+    if (url.find('/') != std::string::npos)
+    {
+        url = url.substr(0, url.find("/", 0));
+    }
+
     for (std::string site : TrustedSites)
     {
         if (url.substr(0, site.size()) == site) return true;
