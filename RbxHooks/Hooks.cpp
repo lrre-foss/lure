@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Hooks.h"
 #include "Helpers.h"
 
@@ -13,13 +14,13 @@ void __declspec(naked) Hooks::TrustCheck::Detour()
         mov Url, eax
     }
 
-    ValidDomain = (int) Helpers::IsTrustedSite((char*) Url);
+    ValidDomain = (int)Helpers::IsTrustedSite((char*)Url);
 
 #if DEBUGLOGS
     if (ValidDomain == 1)
-        std::cout << "[Hooks::TrustCheck] " << (char*) Url << " passes trust check" << std::endl;
+        std::cout << "[Hooks::TrustCheck] " << (char*)Url << " passes trust check" << std::endl;
     else
-        std::cout << "[Hooks::TrustCheck] " << (char*) Url << " does not pass trust check" << std::endl;
+        std::cout << "[Hooks::TrustCheck] " << (char*)Url << " does not pass trust check" << std::endl;
 #endif
 
     __asm
@@ -37,12 +38,12 @@ void __declspec(naked) Hooks::SwapIp::Detour()
 {
     __asm
     {
-        lea eax, dword ptr ss:[esp+8]
+        lea eax, dword ptr ss : [esp + 8]
         mov IpAddress, eax
     }
 
-    if (Helpers::IsExtranetIp((char*) IpAddress))
-        IpAddress = (char*) "RakPeer";
+    if (Helpers::IsExtranetIp((char*)IpAddress))
+        IpAddress = (char*)"RakPeer";
 
     __asm
     {

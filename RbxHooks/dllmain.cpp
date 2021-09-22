@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Main.h"
 
 BOOL WINAPI DllMain(HINSTANCE hModule, DWORD dwReason, LPVOID lpReserved)
@@ -8,4 +9,4 @@ BOOL WINAPI DllMain(HINSTANCE hModule, DWORD dwReason, LPVOID lpReserved)
     return TRUE;
 }
 
-void __declspec(dllexport) HookManager() {}
+void __declspec(dllexport) RbxHooks() {}

@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Main.h"
 #include "Helpers.h"
 #include "Hooks.h"
@@ -65,13 +66,13 @@ void HookMain()
     std::cout << "[HookMain] HookManager has started up" << std::endl;
 #endif
 
-    AppVersion = Helpers::GetAppVersion();
+    AppVersion = (char*)"0";
     AppType = Helpers::GetAppType(AppVersion);
 
 #if DEBUGLOGS
     std::cout << "[HookMain] App type has been detected as " << AppType << std::endl;
 #endif
 
-	CreateHook<Hooks::TrustCheck>();
-	CreateHook<Hooks::SwapIp>();
+    CreateHook<Hooks::TrustCheck>();
+    CreateHook<Hooks::SwapIp>();
 }
