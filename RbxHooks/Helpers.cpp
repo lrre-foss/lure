@@ -31,7 +31,7 @@ bool Helpers::IsTrustedSite(char* _url)
 
     for (std::string site : TrustedSites)
     {
-        if (url.substr(0, site.size()) == site) return true;
+        if (url.size() == site.size() && url.compare(site) == 0) return true;
     }
 
     return false;
