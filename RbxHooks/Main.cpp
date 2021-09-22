@@ -18,7 +18,7 @@ bool AttachHook(void* Function, void* HookAddress, int Length)
     *(DWORD*)((DWORD)HookAddress + 1) = relativeAddress;
 
     DWORD temp;
-    VirtualProtect(HookAddress, Length, CurrentProtection, NULL);
+    VirtualProtect(HookAddress, Length, CurrentProtection, &temp);
 
     return true;
 }
