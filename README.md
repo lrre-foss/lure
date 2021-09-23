@@ -4,8 +4,8 @@ Easy to use client modifications for old Roblox
 ## Hooks
 These describe the included hooks with RbxHooks, but you can also add your own! RbxHooks provides a very easy format to adding your own hooks.
 
-- TrustCheck: Basic hook that detours the internal Roblox IsTrustedSite function and replaces it with a custom one.
-- SwapIp: Censors all peer IPs in a NetworkServer by displaying them as "RakPeer".
+- **TrustCheck**: Basic hook that detours the internal Roblox IsTrustedSite function and replaces it with a custom one. Currently does not patch HTTPS TrustCheck.
+- **SwapIp**: Censors all peer IPs in a NetworkServer by displaying them as "RakPeer".
 
 ## Usage
 For finding hook addresses, [x64dbg](https://x64dbg.com/) is recommended. For patching the import table, [StudPE](http://www.cgsoftlabs.ro/studpe.html) is recommended.
