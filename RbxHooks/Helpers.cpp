@@ -2,7 +2,7 @@
 #include "Helpers.h"
 #include "Hooks.h"
 
-std::vector<std::string> TrustedSites = {
+std::set<std::string> Helpers::TrustedSites = {
     "*.roblox.com",
     "roblox.com"
     // Add your custom domains here...
@@ -38,15 +38,15 @@ bool Helpers::IsTrustedSite(char* _url)
     // Breaks (on purpose!) for normal domains (unless a TLD is somehow trusted.) Does not work for subdomains that are >1 level
     if (url.find('.') != std::string::npos)
     {
-        std::string sliced = url.substr(url.find(".") + 1);
-        if (std::find(TrustedSites.begin(), TrustedSites.end(), "*." + sliced) != TrustedSites.end())
+        std::string slicedUrl = url.substr(url.find(".") + 1);
+        if (TrustedSites.find(slicedUrl) != TrustedSites.end())
         {
             return true;
         }
     }
-    
+
     // Main check
-    if (std::find(TrustedSites.begin(), TrustedSites.end(), url) != TrustedSites.end())
+    if (TrustedSites.find(url) != TrustedSites.end())
     {
         return true;
     }
