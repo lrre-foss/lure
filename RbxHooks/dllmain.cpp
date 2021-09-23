@@ -9,4 +9,4 @@ BOOL WINAPI DllMain(HINSTANCE hModule, DWORD dwReason, LPVOID lpReserved)
     return TRUE;
 }
 
-void __declspec(dllexport) RbxHooks() {}
+void __declspec(dllexport) patch() {}
