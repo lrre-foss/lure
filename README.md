@@ -1,5 +1,5 @@
 # RbxHooks
-Easy to use modifications, in the form of hooks, for older Roblox clients 
+Easy to use client modifications for old Roblox 
 
 ## Hooks
 These describe the included hooks with RbxHooks, but you can also add your own! RbxHooks provides a very easy format to adding your own hooks.
@@ -20,4 +20,4 @@ For finding hook addresses, [x64dbg](https://x64dbg.com/) is recommended. For pa
 7. Close the program by clicking `OK`. This will also save the patches to the executable file.
 
 ## License
-RbxHooks is licensed under the ISC license. A copy of the license [has been included](https://github.com/orcfoss/RbxHooks/blob/trunk/LICENSE) with RbxHooks.
+RbxHooks is licensed under the MIT license. A copy of the license [has been included](https://github.com/orcfoss/RbxHooks/blob/trunk/LICENSE) with RbxHooks.
