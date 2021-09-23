@@ -14,7 +14,7 @@ For finding hook addresses, [x64dbg](https://x64dbg.com/) is recommended. For pa
 1. Open `RobloxApp.exe` with StudPE (File -> Open PE File)
 2. Go to the **Functions** tab
 3. Right click in the left panel and click **Add New Import**.
-4. Click **Dll Select** and browse to `RbxHooks.dll` in your Blockland folder.
+4. Click **Dll Select** and browse to `RbxHooks.dll` in your Roblox folder.
 5. Click **Select func.** and select `patch` from the list that appears.
 6. Click `Add to list`, then `ADD` at the bottom.
 7. Close the program by clicking `OK`. This will also save the patches to the executable file.
