@@ -39,7 +39,7 @@ bool Helpers::IsTrustedSite(char* _url)
     if (url.find('.') != std::string::npos)
     {
         std::string slicedUrl = url.substr(url.find(".") + 1);
-        if (TrustedSites.find(slicedUrl) != TrustedSites.end())
+        if (TrustedSites.find("*." + slicedUrl) != TrustedSites.end())
         {
             return true;
         }
