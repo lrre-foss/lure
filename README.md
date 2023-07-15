@@ -51,5 +51,5 @@ Notes:
 - The signature public key is compiled with the DLL; you needn't hex-edit the executable since all script signature verification is delegated to Lure.
 - You must find addresses *specifically for the client you're applying Lure to*.
 
-## License
+# License
 Lure is licensed under the [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0.txt). A copy of it has been included with Lure.
